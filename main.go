@@ -19,16 +19,16 @@ var (
 	commit            = "0000000"
 	version           = "v0.0.0-LOCAL"
 	date              = "0000-00-00T00:00:00Z"
-	defaultTimeFormat = "\n┌───────────TimingMetrics───────────────┐\n" +
-		"│ DNS Lookup:        %{time_namelookup}s          │\n" +
-		"│ TCP Connection:    %{time_connect}s          │\n" +
-		"│ SSL Handshake:     %{time_appconnect}s          │\n" +
-		"│ Server Processing: %{time_pretransfer}s          │\n" +
-		"│ Content Transfer:  %{time_starttransfer}s          │\n" +
-		"│ Total:             %{time_total}s          │\n" +
-		"├───────────SpeedMetrics────────────────┤\n" +
-		"│ Download Speed:    %{speed_download} bytes/sec     │\n" +
-		"└───────────────────────────────────────┘\n"
+	defaultTimeFormat = "\n\033[1;34m┌───────────TimingMetrics───────────────┐\033[0m\n" +
+		"\033[1;34m│\033[0m DNS Lookup:        \033[1;34m%{time_namelookup}s\033[0m          \033[1;34m│\033[0m\n" +
+		"\033[1;34m│\033[0m TCP Connection:    \033[1;34m%{time_connect}s\033[0m          \033[1;34m│\033[0m\n" +
+		"\033[1;34m│\033[0m SSL Handshake:     \033[1;34m%{time_appconnect}s\033[0m          \033[1;34m│\033[0m\n" +
+		"\033[1;34m│\033[0m Server Processing: \033[1;34m%{time_pretransfer}s\033[0m          \033[1;34m│\033[0m\n" +
+		"\033[1;34m│\033[0m Content Transfer:  \033[1;34m%{time_starttransfer}s\033[0m          \033[1;34m│\033[0m\n" +
+		"\033[1;34m│\033[0m Total:             \033[1;32m%{time_total}s\033[0m          \033[1;34m│\033[0m\n" +
+		"\033[1;34m├───────────SpeedMetrics────────────────┤\033[0m\n" +
+		"\033[1;34m│\033[0m Download Speed:    \033[1;32m%{speed_download}\033[0m bytes/sec     \033[1;34m│\033[0m\n" +
+		"\033[1;34m└───────────────────────────────────────┘\033[0m\n"
 )
 
 func main() {
